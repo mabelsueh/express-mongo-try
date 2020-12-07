@@ -33,9 +33,11 @@ async function main() {
     let db = MongoUtil.getDB();
 
     app.get('/', async (req, res)=>{
-        //'faults is the collection name
+        //'faults' is the collection name
         let faults = await db.collection('faults').find().toArray();
+        // rendering faults.hbs hence ('faults'
         res.render('faults',{
+            // allFaults is just a key name u give and it is also used in the faults.hbs
             "allFaults":faults
         })
     })
