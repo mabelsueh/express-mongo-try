@@ -1,0 +1,46 @@
+{{#extends 'base'}}
+
+    {{#block 'content'}}
+        <form method="POST">
+            <div>
+                <label class="form-label">Fault:</label>
+                <input type="text" name="fault" class="form-control" />
+            </div>
+            <div>
+                <label class="form-label">Location:</label>
+                <input type="text" name="location" class="form-control"/>
+            </div>
+            <div>
+                <label class="form-label">Tags:</label>
+                <div>
+                    <input class="form-check-input mr-3" name="tags" type="checkbox" value="urgent"><label class="form-check-label">Urgent</label>
+                    <input class="form-check-input mr-3" name="tags" type="checkbox" value="dangerous"><label class="form-check-label">Dangerous</label>
+                    <input class="form-check-input mr-3" name="tags" type="checkbox" value="equipment"><label class="form-check-label">Equipment Fault</label>
+                    <input class="form-check-input mr-3" name="tags" type="checkbox" value="maintenance"><label class="form-check-label">Maintenance</label>
+                    <input class="form-check-input mr-3" name="tags" type="checkbox" value="infrastructure"><label class="form-check-label">Infrastructure</label>
+                </div>
+            </div>
+            <div>
+                <label class="form-label">Block Number:</label>
+                <select name="block" class="form-control">
+                    <option value="304">304</option>
+                    <option value="305">305</option>
+                    <option value="306">306</option>
+                    <option value="307">307</option>
+                    <option value="307a">307A</option>
+                </select>
+            </div>
+            <div>
+                <label class="form-label">Name:</label>
+                <input type="text" name="name" class="form-control" />
+            </div>
+            <div>
+                <label class="form-label">Email:</label>
+                <input type="email" name="email" class="form-control" />
+            </div>
+
+            <input type="submit"/>
+        <form>
+    {{/block}}
+
+{{/extends}}
